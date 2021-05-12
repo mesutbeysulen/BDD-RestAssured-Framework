@@ -1,0 +1,8 @@
+.idea
+.settings
+target
+.vscode
+BDD-RestAssured-Framework.iml
+.classpath
+.project
+

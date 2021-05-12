@@ -1,0 +1,9 @@
+{
+  "name": "modok",
+  "job": "leader",
+  "skills": ["Java","C"],
+  "details": {
+    "company": "xyz",
+    "email": "s@s.com"
+  }
+}
