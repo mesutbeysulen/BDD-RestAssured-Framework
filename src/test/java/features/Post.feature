@@ -1,8 +1,20 @@
 Feature: Verify different POST operations using REST Assured
 
-  Scenario Outline: Create users using <body_type>
+  Scenario Outline: Create users using <body_type> - Success
     When Add user with <name> and <job> for '/api/users' using <body_type>
     Then Status code is 201
+    And Print id
+    And Print createdAt
+    Examples:
+      |name   |job |body_type |
+      |user1  |QA  |jsonString|
+      |user2  |Dev |jsonString|
+      |user3  |Eng |hashmap   |
+      |user4  |Sec |hashmap   |
+
+  Scenario Outline: Create users using <body_type> - Fail
+    When Add user with <name> and <job> for '/api/users' using <body_type>
+    Then Status code is 204
     And Print id
     And Print createdAt
     Examples:
@@ -47,3 +59,10 @@ Feature: Verify different POST operations using REST Assured
       |                 |qwerty11  |Missing email or username|/api/login   |registration|
       |user1@user1.com  |          |Missing password         |/api/register|login       |
       |                 |qwerty11  |Missing email or username|/api/login   |login       |
+
+  Scenario: Create users using data table
+    When Add user for '/api/users' using data table
+      |user1  |QA  |
+    Then Status code is 201
+    And Print id
+    And Print createdAt
