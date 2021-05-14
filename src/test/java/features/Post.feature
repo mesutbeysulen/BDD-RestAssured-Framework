@@ -24,6 +24,7 @@ Feature: Verify different POST operations using REST Assured
       |user3  |Eng |hashmap   |
       |user4  |Sec |hashmap   |
 
+  @JSONFileForBody
   Scenario: Create user using json file
     When Add user from 'src/test/resources/Files/SampleJsonFile1.json' for '/api/users'
     Then Status code is 201
@@ -60,6 +61,7 @@ Feature: Verify different POST operations using REST Assured
       |user1@user1.com  |          |Missing password         |/api/register|login       |
       |                 |qwerty11  |Missing email or username|/api/login   |login       |
 
+  @DataTable
   Scenario: Create users using data table
     When Add user for '/api/users' using data table
       |user1  |QA  |

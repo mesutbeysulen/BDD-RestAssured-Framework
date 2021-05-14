@@ -1,5 +1,6 @@
 Feature: Verify different GET operations using REST Assured
 
+  @Examples
   Scenario Outline: <scenario>
     Given Perform get operation for '<apiPath>'
     Then Status code is <status_code>
@@ -7,6 +8,11 @@ Feature: Verify different GET operations using REST Assured
       |scenario                                 |status_code  |apiPath           |
       |Verify status code                       |200          |/api/users        |
       |Verify status code for non-existence user|404          |/api/users/9999999|
+
+  @JSONValidation
+  Scenario: Single user verification - Using JSON Validation
+    Given Perform get operation for '/api/users/2' for JSON Schema Validation
+    Then Validate response using JSON file
 
   Scenario Outline: <scenario>
     Given Perform get operation for '<apiPath>'
@@ -17,6 +23,7 @@ Feature: Verify different GET operations using REST Assured
       |Verify total_pages   |total_pages  |2     |/api/users        |
       |Verify delay response|per_page     |6     |/api/users?delay=2|
 
+  @hamcrest-containsInAnyOrder
   Scenario: Verify IDs - Success
     Given Perform get operation for '/api/users'
     When Status code is 200
@@ -33,10 +40,12 @@ Feature: Verify different GET operations using REST Assured
     Then 'first_name' is 'Janet' for '/api/users/2'
     And 'last_name' is 'Weaver' for '/api/users/2'
 
+  @QueryParams
   Scenario: Query Parameters
     Given Perform query get operation for '/api/users'
     Then Status code is 200
 
+  @PathParams
   Scenario: Path Parameter
     Given Perform path get operation for '/api/users'
     Then Status code is 200

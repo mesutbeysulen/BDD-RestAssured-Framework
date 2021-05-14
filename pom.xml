@@ -14,6 +14,7 @@
         <cucumber-java.version>6.10.3</cucumber-java.version>
         <cucumber-testng.version>6.10.3</cucumber-testng.version>
         <jackson-databind.version>2.12.3</jackson-databind.version>
+        <json-schema-validator.version>4.3.3</json-schema-validator.version>
     </properties>
 
     <dependencies>
@@ -24,6 +25,13 @@
             <artifactId>rest-assured</artifactId>
             <version>${rest-assured.version}</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${json-schema-validator.version}</version>
+        </dependency>
+
 
         <!-- Cucumber Java -->
         <dependency>
