@@ -1,4 +1,4 @@
-package steps;
+package steps.reqres;
 
 import constants.GlobalVars;
 import httpmethods.Patch;
