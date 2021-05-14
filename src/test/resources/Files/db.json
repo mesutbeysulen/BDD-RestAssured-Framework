@@ -1,0 +1,200 @@
+{
+  "value": {
+    "ready": true,
+    "message": "Selenium Grid ready.",
+    "nodes": [
+      {
+        "id": "62c9d5c3-8055-422f-891b-0c239b62135c",
+        "uri": "http:\u002f\u002f172.29.0.6:5555",
+        "maxSessions": 1,
+        "osInfo": {
+          "arch": "amd64",
+          "name": "Linux",
+          "version": "5.8.0-53-generic"
+        },
+        "heartbeatPeriod": 60000,
+        "availability": "UP",
+        "version": "4.0.0-beta-3 (revision fcfbc6ba25)",
+        "slots": [
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "MicrosoftEdge",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "62c9d5c3-8055-422f-891b-0c239b62135c",
+              "id": "0cd117fb-44bf-4420-9aaf-cc0b2124244f"
+            }
+          }
+        ]
+      },
+      {
+        "id": "373ef72c-158f-47a3-9148-dcabbbd33d42",
+        "uri": "http:\u002f\u002f172.29.0.2:5555",
+        "maxSessions": 1,
+        "osInfo": {
+          "arch": "amd64",
+          "name": "Linux",
+          "version": "5.8.0-53-generic"
+        },
+        "heartbeatPeriod": 60000,
+        "availability": "UP",
+        "version": "4.0.0-beta-3 (revision fcfbc6ba25)",
+        "slots": [
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "opera",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "373ef72c-158f-47a3-9148-dcabbbd33d42",
+              "id": "5bd12f33-d4d9-4cb6-9738-a86c45a6c7c6"
+            }
+          }
+        ]
+      },
+      {
+        "id": "47439b23-b2d8-42a8-aa8a-f34860817e55",
+        "uri": "http:\u002f\u002f172.29.0.4:5555",
+        "maxSessions": 5,
+        "osInfo": {
+          "arch": "amd64",
+          "name": "Linux",
+          "version": "5.8.0-53-generic"
+        },
+        "heartbeatPeriod": 60000,
+        "availability": "UP",
+        "version": "4.0.0-beta-3 (revision 5d108f9a67)",
+        "slots": [
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "chrome",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "47439b23-b2d8-42a8-aa8a-f34860817e55",
+              "id": "2d73f963-250b-455c-bce5-10570df571e0"
+            }
+          },
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "chrome",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "47439b23-b2d8-42a8-aa8a-f34860817e55",
+              "id": "a0dd42f2-fc83-4e43-8340-76a99b21f919"
+            }
+          },
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "chrome",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "47439b23-b2d8-42a8-aa8a-f34860817e55",
+              "id": "3c9a03a6-8617-47fb-ae09-0ff11ad8d350"
+            }
+          },
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "chrome",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "47439b23-b2d8-42a8-aa8a-f34860817e55",
+              "id": "c32131d4-2c55-4eea-a8e6-4085ec96dadc"
+            }
+          },
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "chrome",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "47439b23-b2d8-42a8-aa8a-f34860817e55",
+              "id": "db5a2a69-6fa9-4665-9b96-abdba4608f20"
+            }
+          }
+        ]
+      },
+      {
+        "id": "87575580-e604-43ad-8a26-9fe14e20d52f",
+        "uri": "http:\u002f\u002f172.29.0.3:5555",
+        "maxSessions": 5,
+        "osInfo": {
+          "arch": "amd64",
+          "name": "Linux",
+          "version": "5.8.0-53-generic"
+        },
+        "heartbeatPeriod": 60000,
+        "availability": "UP",
+        "version": "4.0.0-beta-3 (revision fcfbc6ba25)",
+        "slots": [
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "firefox",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "87575580-e604-43ad-8a26-9fe14e20d52f",
+              "id": "ef96a237-3d7a-4ede-9663-7ffa13235151"
+            }
+          },
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "firefox",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "87575580-e604-43ad-8a26-9fe14e20d52f",
+              "id": "96cae655-77b8-403a-b262-24bb36041e25"
+            }
+          },
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "firefox",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "87575580-e604-43ad-8a26-9fe14e20d52f",
+              "id": "218e45c3-229d-4261-8cfb-20a4f57c5616"
+            }
+          },
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "firefox",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "87575580-e604-43ad-8a26-9fe14e20d52f",
+              "id": "9c023df0-cbae-42ff-b483-464d71a0af35"
+            }
+          },
+          {
+            "lastStarted": "1970-01-01T00:00:00Z",
+            "stereotype": {
+              "browserName": "firefox",
+              "platformName": "LINUX"
+            },
+            "id": {
+              "hostId": "87575580-e604-43ad-8a26-9fe14e20d52f",
+              "id": "3a9258f5-1047-4403-b4a6-d2d1d27bb094"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
