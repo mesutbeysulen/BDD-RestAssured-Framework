@@ -18,7 +18,7 @@ Tests can be executed in parallel using:
 - Install `npm i json-server` or `npm i json-server -g`
 - Create a [db.json](src/test/resources/Files/db.json) file
 - Run `json-server --watch db.json`
-- Access server on `localhost:3000`
+- Access server on `localhost:3000`  
 [Reference Link](https://www.npmjs.com/package/json-server)
   
 ### Note:
