@@ -21,7 +21,6 @@ public class GetSteps {
 
     @Owner("User1")
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Perform get operation")
     @Step("Step Perform get operation")
     @Given("^Perform get operation for '(.*)'$")
     public void performGetOperation(String apiPath) {
