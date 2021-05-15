@@ -4,11 +4,12 @@ import constants.GlobalVars;
 import httpmethods.Get;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.qameta.allure.*;
 import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 import threadsafety.ApiResponse;
 import threadsafety.StatusCode;
-import utilities.Common;
 
 import java.io.File;
 
@@ -18,6 +19,10 @@ import static org.hamcrest.Matchers.*;
 
 public class GetSteps {
 
+    @Owner("User1")
+    @Severity(SeverityLevel.CRITICAL)
+    @Description("Perform get operation")
+    @Step("Step Perform get operation")
     @Given("^Perform get operation for '(.*)'$")
     public void performGetOperation(String apiPath) {
         StatusCode.setStatusCode(Get.getStatusCode(GlobalVars.getUrl().concat(apiPath)));

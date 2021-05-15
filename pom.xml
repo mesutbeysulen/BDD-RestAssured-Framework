@@ -9,15 +9,31 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <allure-testng.version>2.13.10</allure-testng.version>
+        <aspectj.version>1.9.6</aspectj.version>
+        <async-http-client.version>2.12.3</async-http-client.version>
         <rest-assured.version>4.3.3</rest-assured.version>
-        <lombok.version>1.18.20</lombok.version>
+        <json-schema-validator.version>4.3.3</json-schema-validator.version>
         <cucumber-java.version>6.10.3</cucumber-java.version>
         <cucumber-testng.version>6.10.3</cucumber-testng.version>
+        <lombok.version>1.18.20</lombok.version>
         <jackson-databind.version>2.12.3</jackson-databind.version>
-        <json-schema-validator.version>4.3.3</json-schema-validator.version>
     </properties>
 
     <dependencies>
+        <!-- Allure Report -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>${allure-testng.version}</version>
+        </dependency>
+
+        <!-- ASync Request -->
+        <dependency>
+            <groupId>org.asynchttpclient</groupId>
+            <artifactId>async-http-client</artifactId>
+            <version>${async-http-client.version}</version>
+        </dependency>
 
         <!-- Rest Assured -->
         <dependency>
@@ -54,6 +70,7 @@
             <version>${lombok.version}</version>
         </dependency>
 
+        <!-- JSON -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
@@ -106,7 +123,18 @@
                         <suiteXmlFiles>
                             <suiteXmlFile>testng.xml</suiteXmlFile>
                         </suiteXmlFiles>
+                        <argLine>
+                            -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+                        </argLine>
                     </configuration>
+                    <dependencies>
+                        <!-- ASpectJ -->
+                        <dependency>
+                            <groupId>org.aspectj</groupId>
+                            <artifactId>aspectjweaver</artifactId>
+                            <version>${aspectj.version}</version>
+                        </dependency>
+                    </dependencies>
                 </plugin>
             </plugins>
         </pluginManagement>

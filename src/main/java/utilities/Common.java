@@ -39,6 +39,10 @@ public class Common {
         return given().spec(setSpec(url, apiPath)).when().get().getStatusCode();
     }
 
+    public static void getResponseUsingProxy(String url, String apiPath, String proxyHost, int proxyPort) {
+        given().spec(setSpec(url, apiPath)).proxy(proxyHost, proxyPort).when().get();
+    }
+
     public static JsonPath getJsonPath(String url, String apiPath) {
         return given().spec(setSpec(url, apiPath)).when().get().jsonPath();
     }

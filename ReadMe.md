@@ -5,6 +5,7 @@ Sample automation project to practice RestApi using:
 - TestNG (with parallel test)
 - Rest Assured
 - Maven
+- Allure Reporting
 
 
 ### Test Runner
@@ -32,3 +33,15 @@ Tests can be executed in parallel using:
     - [Maven Dependency](https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator/4.3.3)
 - File Upload and Download using RestAssured
     - [Reference Video](https://www.youtube.com/watch?v=_NRgpI48ogQ&list=PL8VbCbavWfeE5aEeEpoXp2xiHi5K_7BMT&index=21)
+- Allure Tags 
+  ```
+    @Epic
+    @Features
+    @Stories/@Story
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("In this cool test we will check cool thing")
+    @Step
+    @Attachment
+    @Link
+    @Owner
+  ```

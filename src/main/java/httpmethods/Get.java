@@ -16,6 +16,11 @@ public final class Get {
                 .get(url);
     }
 
+    public static Response getResponseUsingProxy(String url, String proxyHost, int proxyPort) {
+        return given().contentType(ContentType.JSON).proxy(proxyHost, proxyPort).when()
+                .get(url);
+    }
+
     public static int getStatusCode(String url) {
         return given().contentType(ContentType.JSON).when()
                 .get(url).getStatusCode();
