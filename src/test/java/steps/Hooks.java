@@ -35,9 +35,9 @@ public class Hooks {
 
         String featureFilePath = scenario.getUri().toString();
         Collection<String> tags = scenario.getSourceTagNames();
-
-        Allure.parameter("Tags", tags);
-        Allure.parameter("Feature File", featureFilePath.substring(featureFilePath.lastIndexOf("/")+1));
+        if (!tags.isEmpty())
+            Allure.parameter("Tags", "\"" + tags.toString().replaceAll("\\[|\\]|\"", "") + "\"");
+        Allure.parameter("Feature File", "\"" + featureFilePath.substring(featureFilePath.lastIndexOf("/")+1) + "\"");
         Allure.feature(featureName);
         Allure.description(scenarioName);
     }
