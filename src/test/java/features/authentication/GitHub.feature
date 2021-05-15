@@ -18,7 +18,7 @@ Feature: Authentication
 
   @OAuth2
   Scenario: OAuth2
-    Given Using performs digest auth to 'https://urlforOAuth2.com' with 'AccessToken'
+    Given Using performs digest auth to 'https://urlforOAuth2.com' using 'AccessToken'
     Then Status code is 200
 
 

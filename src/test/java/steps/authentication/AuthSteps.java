@@ -20,12 +20,12 @@ public class AuthSteps {
     }
 
     @Given("^Using performs no auth to '(.*)'$")
-    public void digestAuth(String url) {
+    public void noAuth(String url) {
         ApiResponse.setResponse(Authentication.getResponseUsingNoAuth(url));
         StatusCode.setStatusCode(ApiResponse.getResponse().getStatusCode());
     }
 
-    @Given("^Using performs digest auth to '(.*)' with '(.*)'$")
+    @Given("^Using performs digest auth to '(.*)' using '(.*)'$")
     public void oAuth2(String url, String accessToken) {
         ApiResponse.setResponse(Authentication.getResponseOAuth2(url, accessToken));
         StatusCode.setStatusCode(ApiResponse.getResponse().getStatusCode());
