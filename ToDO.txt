@@ -1,11 +1,4 @@
 Notes just to remember:
 - Reporting
 - Authentication
-- POJO
-    - Serializing
-        -   Reference: https://www.youtube.com/watch?v=DLwF5weJGRI&list=PL6tu16kXT9PpgqfMbMdzUzDenYgb0gbk0&index=21
-    - Deserializing
-        -
-- JSON Schema Validation
-    - Reference: https://www.youtube.com/watch?v=3NiHE311Dbw&list=PL6tu16kXT9PpgqfMbMdzUzDenYgb0gbk0&index=18
-    - Maven Dependency: https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator/4.3.3
+
