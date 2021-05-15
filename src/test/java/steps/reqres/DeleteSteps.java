@@ -7,7 +7,7 @@ import threadsafety.StatusCode;
 
 public class DeleteSteps {
     @Given("^Perform delete operation for '(.*)'$")
-    public void performDeleteOperationForApiUsers(String apiPath) {
+    public void deleteOperation(String apiPath) {
         StatusCode.setStatusCode(Delete.delete(GlobalVars.getUrl().concat(apiPath)).getStatusCode());
     }
 }
