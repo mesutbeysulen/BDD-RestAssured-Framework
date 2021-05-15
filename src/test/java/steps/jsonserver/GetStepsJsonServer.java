@@ -4,13 +4,11 @@ import constants.GlobalVars;
 import httpmethods.Get;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import lombok.extern.java.Log;
 import threadsafety.ApiResponse;
 import threadsafety.StatusCode;
 
 import static org.hamcrest.Matchers.*;
 
-@Log
 public class GetStepsJsonServer {
 
     @Given("^User performs get operation for '(.*)'$")
