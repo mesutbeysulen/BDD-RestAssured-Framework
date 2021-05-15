@@ -21,7 +21,6 @@ public class GetSteps {
 
     @Owner("User1")
     @Severity(SeverityLevel.CRITICAL)
-    @Step("Step Perform get operation")
     @Given("^Perform get operation for '(.*)'$")
     public void performGetOperation(String apiPath) {
         StatusCode.setStatusCode(Get.getStatusCode(GlobalVars.getUrl().concat(apiPath)));
