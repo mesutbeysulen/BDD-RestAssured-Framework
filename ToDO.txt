@@ -1,4 +1,0 @@
-Notes just to remember:
-- Reporting
-- Authentication
-
