@@ -30,3 +30,5 @@ Tests can be executed in parallel using:
 - JSON Schema Validation
     - [Reference Video](https://www.youtube.com/watch?v=3NiHE311Dbw&list=PL6tu16kXT9PpgqfMbMdzUzDenYgb0gbk0&index=18) 
     - [Maven Dependency](https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator/4.3.3)
+- File Upload and Download using RestAssured
+    - [Reference Video](https://www.youtube.com/watch?v=_NRgpI48ogQ&list=PL8VbCbavWfeE5aEeEpoXp2xiHi5K_7BMT&index=21)

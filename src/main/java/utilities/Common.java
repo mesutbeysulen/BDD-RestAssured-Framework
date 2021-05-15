@@ -6,6 +6,8 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
+import java.io.File;
+
 public class Common {
 
      static RequestSpecification setSpec(String url, String apiPath) {
@@ -39,5 +41,11 @@ public class Common {
 
     public static JsonPath getJsonPath(String url, String apiPath) {
         return given().spec(setSpec(url, apiPath)).when().get().jsonPath();
+    }
+
+    public static Response upload(String apiPath, String filePath, String mimeType) {
+         File file = new File(filePath);
+        return given().spec(setSpec(apiPath, apiPath)).multiPart("file", file, mimeType)
+                .post(apiPath);
     }
 }
