@@ -25,3 +25,5 @@ Tests can be executed in parallel using:
 - In [Common.java](src/main/java/utilities/Common.java), reusable methods are added using `RequestSpecBuilder` and `RequestSpecification`
 - In [httpmethods package](src/main/java/httpmethods), reusable methods are added using given(), when(), etc
 
+### Important Links:
+- To generate POJO - [https://www.jsonschema2pojo.org/](https://www.jsonschema2pojo.org/)

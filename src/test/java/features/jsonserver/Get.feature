@@ -5,5 +5,3 @@ Feature: Verify different GET operations using REST Assured
     Then Status code is 200
     And 'result' for request is 'pong'
     And Print result
-
-#  Scenario:

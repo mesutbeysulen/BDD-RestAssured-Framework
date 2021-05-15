@@ -39,9 +39,9 @@ public class PostSteps {
     public void printValue(String key) {
         log.info(key + " is " + ApiResponse.getResponse().jsonPath().getString(key));
         // or
-        Response res = ApiResponse.getResponse();
-        JsonPath jsonPath = res.jsonPath();
-        log.info(jsonPath.getString(key));
+        // Response res = ApiResponse.getResponse();
+        // JsonPath jsonPath = res.jsonPath();
+        // log.info(jsonPath.getString(key));
     }
 
     @When("^Add user from '(.*)' for '(.*)'$")
