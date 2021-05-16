@@ -27,6 +27,10 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     @BeforeSuite
     public void beforeSuite() {
         FileSystem.deleteOldReports();
+        // To set environment details
+        FileSystem.copy("src/test/resources/allure.properties", "allure-results/environment.properties");
+        //To set executor details. Will be useful when merged with Jenkins
+        FileSystem.copy("src/test/resources/allureExecutor.json", "allure-results/executor.json");
     }
 
     @Override

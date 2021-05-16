@@ -7,13 +7,12 @@ Sample automation project to practice RestApi using:
 - Maven
 - Allure Reporting
 
-
 ### Test Runner
 Tests can be executed in parallel using:
 - [pom.xml](pom.xml)
 - [testng.xml](testng.xml)
-- [TestRunner.java](src/test/java/runner/TestRunner.java)
-
+- [TestRunner.java](src/test/java/runner/TestRunner.java)  
+**Note:** Reporting folder `allure-results`  will be cleaned before each run. To avoid it comment `FileSystem.deleteOldReports()` in `@BeforeSuite` of [TestRunner.java](src/test/java/runner/TestRunner.java)
 ### To Deploy Sample JSON Server
 - Setup Node
 - Install `npm i json-server` or `npm i json-server -g`
