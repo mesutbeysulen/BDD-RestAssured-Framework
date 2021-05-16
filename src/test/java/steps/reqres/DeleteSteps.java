@@ -1,13 +1,13 @@
 package steps.reqres;
 
 import constants.GlobalVars;
-import httpmethods.Delete;
+import servicehelpers.Delete;
 import io.cucumber.java.en.Given;
-import threadsafety.StatusCode;
+import settergetter.ThreadSafety;
 
 public class DeleteSteps {
     @Given("^Perform delete operation for '(.*)'$")
-    public void deleteOperation(String apiPath) {
-        StatusCode.setStatusCode(Delete.delete(GlobalVars.getUrl().concat(apiPath)).getStatusCode());
+    public void deleteOperation(String endpoint) {
+        ThreadSafety.setStatusCode(Delete.delete(GlobalVars.getUrl().concat(endpoint)).getStatusCode());
     }
 }

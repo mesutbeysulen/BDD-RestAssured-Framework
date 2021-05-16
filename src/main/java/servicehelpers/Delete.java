@@ -1,4 +1,4 @@
-package httpmethods;
+package servicehelpers;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;

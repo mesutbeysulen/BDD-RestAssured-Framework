@@ -2,7 +2,9 @@ package runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
+import utilities.FileSystem;
 
 @CucumberOptions(
         features = "src/test/java/features",
@@ -21,6 +23,11 @@ import org.testng.annotations.DataProvider;
         //          mvn clean test -Dcucumber.filter.tags="@TAGNAME or @TAGNAME2"
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
+
+    @BeforeSuite
+    public void beforeSuite() {
+        FileSystem.deleteOldReports();
+    }
 
     @Override
     @DataProvider(parallel = true)

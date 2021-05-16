@@ -1,19 +1,20 @@
-package deserialization;
+package utilities;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import constants.GlobalVars;
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 import pojo.Pojo1;
-import threadsafety.ApiResponse;
-import threadsafety.StatusCode;
+import settergetter.ThreadSafety;
 
 import java.lang.reflect.Type;
 import java.util.List;
 
-public class DeSerialization {
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public final class DeSerialization {
 
     // To convert POJO to JSON
     private static final ObjectMapper MAPPER = new ObjectMapper();
@@ -25,8 +26,8 @@ public class DeSerialization {
         String url = GlobalVars.getUrl2().concat(apiPath);
         Pojo1 pojo1 = RestAssured.given().get(url).as(Pojo1.class);
 
-        ApiResponse.setResponse(RestAssured.given().get(url));
-        StatusCode.setStatusCode(ApiResponse.getResponse().getStatusCode());
+        ThreadSafety.setResponse(RestAssured.given().get(url));
+        ThreadSafety.setStatusCode(ThreadSafety.getResponse().getStatusCode());
 
         // Get all the result in array
         String url2 = GlobalVars.getUrl2().concat("/photos");

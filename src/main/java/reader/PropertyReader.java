@@ -1,12 +1,13 @@
-package filereader;
+package reader;
 
+import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 import java.io.FileReader;
 import java.util.Properties;
 
-@NoArgsConstructor
-public class PropertyReader {
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public final class PropertyReader {
 
     public static String getValue(String key, String filePath) {
         Properties properties = new Properties();

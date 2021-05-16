@@ -8,11 +8,9 @@ import io.cucumber.java.Scenario;
 import io.cucumber.plugin.event.PickleStepTestStep;
 import io.cucumber.plugin.event.TestCase;
 import io.qameta.allure.Allure;
-import io.qameta.allure.AllureId;
 import io.qameta.allure.AllureLifecycle;
 import org.testng.Reporter;
-import threadsafety.ApiResponse;
-import threadsafety.StatusCode;
+import settergetter.ThreadSafety;
 
 import java.lang.reflect.Field;
 import java.util.Collection;
@@ -23,6 +21,7 @@ public class Hooks {
 
     private int currentStepDefIndex = 0;
     private AllureLifecycle lifecycle;
+
     @Before
     public void before(Scenario scenario) {
         Object[] paramNames = Reporter.getCurrentTestResult().getParameters();
@@ -71,7 +70,7 @@ public class Hooks {
     public void after() {
         lifecycle = null;
         currentStepDefIndex = 0;
-        StatusCode.unloadStatusCode();
-        ApiResponse.unloadRes();
+        ThreadSafety.unloadStatusCode();
+        ThreadSafety.unloadRes();
     }
 }

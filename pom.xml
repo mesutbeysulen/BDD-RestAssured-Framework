@@ -9,6 +9,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <commons-io.version>2.8.0</commons-io.version>
         <allure-testng.version>2.13.10</allure-testng.version>
         <aspectj.version>1.9.6</aspectj.version>
         <async-http-client.version>2.12.3</async-http-client.version>
@@ -21,6 +22,14 @@
     </properties>
 
     <dependencies>
+
+        <!-- For File System -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+
         <!-- Allure Report -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
@@ -149,5 +158,5 @@
             </plugin>
         </plugins>
     </build>
-    
+
 </project>

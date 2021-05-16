@@ -1,17 +1,16 @@
 package steps.reqres;
 
 import constants.GlobalVars;
-import httpmethods.Put;
+import servicehelpers.Put;
 import io.cucumber.java.en.Given;
-import threadsafety.ApiResponse;
-import threadsafety.StatusCode;
+import settergetter.ThreadSafety;
 
 public class PutSteps {
 
     @Given("^Perform put operation for '(.*)'$")
-    public void putOperation(String apiPath) {
+    public void putOperation(String endpoint) {
         String body = "{\"name\": \"user1\",\"job\": \"qa\"}";
-        ApiResponse.setResponse(Put.put(body, GlobalVars.getUrl().concat(apiPath)));
-        StatusCode.setStatusCode(ApiResponse.getResponse().getStatusCode());
+        ThreadSafety.setResponse(Put.put(body, GlobalVars.getUrl().concat(endpoint)));
+        ThreadSafety.setStatusCode(ThreadSafety.getResponse().getStatusCode());
     }
 }

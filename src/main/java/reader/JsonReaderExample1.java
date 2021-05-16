@@ -1,9 +1,7 @@
-package filereader;
+package reader;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 
 import java.io.IOException;
 import java.nio.file.Files;

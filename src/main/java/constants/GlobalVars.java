@@ -1,6 +1,6 @@
 package constants;
 
-import filereader.PropertyReader;
+import reader.PropertyReader;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

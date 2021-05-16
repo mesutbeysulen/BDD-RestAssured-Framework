@@ -1,4 +1,4 @@
-package httpmethods;
+package servicehelpers;
 
 import io.restassured.response.Response;
 import lombok.AccessLevel;
