@@ -9,6 +9,7 @@ import io.cucumber.plugin.event.PickleStepTestStep;
 import io.cucumber.plugin.event.TestCase;
 import io.qameta.allure.Allure;
 import io.qameta.allure.AllureLifecycle;
+import io.qameta.allure.testng.AllureTestNg;
 import org.testng.Reporter;
 import settergetter.ThreadSafety;
 
@@ -25,7 +26,8 @@ public class Hooks {
     @Before
     public void before(Scenario scenario) {
         Object[] paramNames = Reporter.getCurrentTestResult().getParameters();
-        String scenarioName = paramNames[0].toString().replaceAll("\"", "");
+        // String scenarioName = paramNames[0].toString().replaceAll("\"", "");
+        String scenarioName = scenario.getName();
         String featureName = paramNames[1].toString().replaceAll("Optional|\\[|\\]|\"", "");
 
         lifecycle = Allure.getLifecycle();
